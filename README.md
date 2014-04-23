@@ -21,11 +21,17 @@ Overrides a few defaults from the `et_rails_app` cookbook:
 * `node['nginx']['socketproxy']['default_app']`
 * `node['nginx']['socketproxy']['apps']`
 
+Also sets a few attributes used by the `node` cookbook:
+
+* `['node']['revision']`
+* `['node']['packages']`
+
 # Recipes
 
 ## default
 
-Includes `et_rails_app::default`
+1. Installs & sets up Node.js & its dependencies
+2. Includes `et_rails_app::default`
 
 # Author
 
