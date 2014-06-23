@@ -41,6 +41,8 @@ describe 'et_loading_dock_app::default' do
         'secret_access_key' => 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
       }
     )
+
+    stub_command('which nginx').and_return('/usr/sbin/nginx')
   end
 
   it 'includes et_rails_app' do
