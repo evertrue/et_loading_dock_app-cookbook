@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'et_loading_dock_app::default' do
   let(:chef_run) do
-    ChefSpec::Runner.new do |node|
+    ChefSpec::SoloRunner.new do |node|
       # Create a new environment
       env = Chef::Environment.new
       env.name 'prod'
