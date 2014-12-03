@@ -2,6 +2,14 @@ et_loading_dock_app cookbook CHANGELOG
 ==================================
 This file is used to list changes made in each version of the et_loading_dock_app cookbook.
 
+v2.1.0 (2014-12-03)
+-------------------
+
+* Bump `et_rails_app` to `~> 5.2` (currently lands at v5.2.11)
+    - Primarily done to introduce Upstart script changes included in `et_rails_app`
+* Update testing for newer ChefSpec & Serverspec versions
+* Clean up Test Kitchen config
+
 v2.0.0 (2014-06-23)
 -------------------
 
