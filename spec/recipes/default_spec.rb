@@ -16,6 +16,9 @@ describe 'et_loading_dock_app::default' do
   end
 
   before do
+    # Need this in case we're running on a node with no /proc/mounts
+    allow(File).to receive(:readlines).with('/proc/mounts').and_return([])
+
     stub_data_bag_item('endpoints', 'rds').and_return(
       id: 'rds',
       prod: {
