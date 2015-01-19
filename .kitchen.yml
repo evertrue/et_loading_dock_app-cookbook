@@ -1,9 +1,17 @@
 ---
 driver:
-  name: vagrant
-  customize:
-    cpus: 4
-    memory: 1536
+  name: ec2
+  require_chef_omnibus: true
+  aws_access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  aws_secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+  aws_ssh_key_id: <%= ENV['AWS_KEYPAIR_NAME'] %>
+  ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
+  region: us-east-1
+  availability_zone: us-east-1b
+  security_group_ids: ['ci-testing']
+  username: ubuntu
+  flavor_id: c3.large
+  interface: public
 
 provisioner:
   name: chef_zero
@@ -11,10 +19,15 @@ provisioner:
   data_bags_path: <%= ENV['CHEF_REPO'] %>/data_bags
   environments_path: <%= ENV['CHEF_REPO'] %>/environments
   client_rb:
-    environment: '_default'
+    environment: _default
 
 platforms:
-- name: ubuntu-12.04
+  - name: ubuntu-14.04
+    driver_config:
+      image_id: ami-92f569fa
+      tags:
+        Name: et_loading_dock_app-default-ubuntu-1404
+        Env: public
 
 suites:
   - name: default
