@@ -2,6 +2,12 @@ et_loading_dock_app cookbook CHANGELOG
 ==================================
 This file is used to list changes made in each version of the et_loading_dock_app cookbook.
 
+v2.1.1 (2015-01-19)
+-------------------
+
+* Bump `et_rails_app` to `~> 7.0`
+* Update .kitchen.yml for AWS Testing by default
+
 v2.1.0 (2014-12-03)
 -------------------
 
