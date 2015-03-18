@@ -2,6 +2,11 @@ et_loading_dock_app cookbook CHANGELOG
 ==================================
 This file is used to list changes made in each version of the et_loading_dock_app cookbook.
 
+v2.2.0 (2015-03-18)
+-------------------
+
+* Bump `et_rails_app` to `~> 8.0`
+
 v2.1.1 (2015-01-19)
 -------------------
 
