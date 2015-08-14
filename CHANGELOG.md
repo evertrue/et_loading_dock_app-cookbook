@@ -2,6 +2,11 @@ et_loading_dock_app cookbook CHANGELOG
 ==================================
 This file is used to list changes made in each version of the et_loading_dock_app cookbook.
 
+v2.3.1 (2015-07-29)
+-------------------
+
+* Disable automated, unattended reboots b/c Loading Dock does not come back after a reboot
+
 v2.3.0 (2015-07-29)
 -------------------
 
