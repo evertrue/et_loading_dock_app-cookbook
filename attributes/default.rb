@@ -11,3 +11,5 @@ set['nginx']['socketproxy']['apps'] = {
     }
   }
 }
+
+set['reboot_coordinator']['reboot_permitted'] = false
